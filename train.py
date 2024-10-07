@@ -28,4 +28,5 @@ while True:
             cv.imshow("Image White", imgWhite)
 
     cv.imshow("Image", img)
-    cv.waitKey(1)
+    if cv.waitKey(1) & 0xFF == ord('q'):  
+        break
