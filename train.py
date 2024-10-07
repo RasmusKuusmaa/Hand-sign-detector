@@ -10,6 +10,7 @@ while True:
         hand = hands[0]
         x,y,w,h = hand['bbox']
         imgCrop = img[y:y+h, x:x+w]
-        cv.imshow('Cropped Image', imgCrop)
+        if imgCrop.size > 0:
+            cv.imshow('Cropped Image', imgCrop)
     cv.imshow("image", img)
     cv.waitKey(1)
